@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="53283" started-at="2023-04-08T11:39:49 IST" finished-at="2023-04-08T11:40:42 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.vcentry.lab.runner.FailedRunner@4cf4d528]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="53283" started-at="2023-04-08T11:39:49 IST" finished-at="2023-04-08T11:40:42 IST">
+      <class name="com.vcentry.lab.runner.FailedRunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.vcentry.lab.runner.FailedRunner@4cf4d528]" name="setUpClass" is-config="true" duration-ms="439" started-at="2023-04-08T11:39:49 IST" finished-at="2023-04-08T11:39:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@bdd2027]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.vcentry.lab.runner.FailedRunner@4cf4d528]" name="runScenario" duration-ms="26586" started-at="2023-04-08T11:39:49 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-08T11:40:16 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search mobile"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validate e-com app with order placement"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 0, Size: 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+at java.util.ArrayList.get(ArrayList.java:435)
+at com.vcentry.lab.pages.ProductListPage.getFirstProductName(ProductListPage.java:12)
+at com.vcentry.lab.testCases.SearchProduct.verifyTheListOfContents(SearchProduct.java:18)
+at ✽.verify the list of contents(file:///C:/Batch%20256/X1_BDD%20(CucumberTestNgWebDriver)/src/test/resources/features/order.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.vcentry.lab.runner.FailedRunner@4cf4d528]" name="runScenario" duration-ms="26117" started-at="2023-04-08T11:40:16 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-08T11:40:42 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Place order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validate e-com app with order placement"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.vcentry.lab.pages.DetailsPage.getProductName(DetailsPage.java:8)
+at com.vcentry.lab.testCases.PlaceOrder.verifyTheFirstProductNameAndPriceInDetailsPage(PlaceOrder.java:30)
+at ✽.verify the first product name and price in details page(file:///C:/Batch%20256/X1_BDD%20(CucumberTestNgWebDriver)/src/test/resources/features/order.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.vcentry.lab.runner.FailedRunner@4cf4d528]" name="tearDownClass" is-config="true" duration-ms="52" started-at="2023-04-08T11:40:42 IST" finished-at="2023-04-08T11:40:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.vcentry.lab.runner.FailedRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

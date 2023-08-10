@@ -1,0 +1,31 @@
+
+@order @search
+Scenario: Search mobile               [90m# src/test/resources/features/order.feature:10[0m
+  [32mGiven [0m[32mopen browser[0m                  [90m# com.vcentry.lab.testCases.CommonSteps.openBrowser()[0m
+  [32mWhen [0m[32menter url[0m                      [90m# com.vcentry.lab.testCases.CommonSteps.enterUrl()[0m
+  [32mThen [0m[32mclose register page[0m            [90m# com.vcentry.lab.testCases.CommonSteps.closeRegisterPage()[0m
+  [32mThen [0m[32menter mobile name as [0m[32m[1m"samsung"[0m [90m# com.vcentry.lab.testCases.SearchProduct.enterMobileName(java.lang.String)[0m
+  [31mAnd [0m[31mverify the list of contents[0m     [90m# com.vcentry.lab.testCases.SearchProduct.verifyTheListOfContents()[0m
+      [31mjava.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at com.vcentry.lab.pages.ProductListPage.getFirstProductName(ProductListPage.java:12)
+	at com.vcentry.lab.testCases.SearchProduct.verifyTheListOfContents(SearchProduct.java:18)
+	at ✽.verify the list of contents(file:///C:/Batch%20256/X1_BDD%20(CucumberTestNgWebDriver)/src/test/resources/features/order.feature:12)
+[0m
+
+@order @place
+Scenario: Place order                                          [90m# src/test/resources/features/order.feature:15[0m
+  [32mGiven [0m[32mopen browser[0m                                           [90m# com.vcentry.lab.testCases.CommonSteps.openBrowser()[0m
+  [32mWhen [0m[32menter url[0m                                               [90m# com.vcentry.lab.testCases.CommonSteps.enterUrl()[0m
+  [32mThen [0m[32mclose register page[0m                                     [90m# com.vcentry.lab.testCases.CommonSteps.closeRegisterPage()[0m
+  [32mThen [0m[32menter mobile name as [0m[32m[1m"iphone"[0m                           [90m# com.vcentry.lab.testCases.SearchProduct.enterMobileName(java.lang.String)[0m
+  [32mWhen [0m[32mget first product name and price[0m                        [90m# com.vcentry.lab.testCases.PlaceOrder.GetFirstProductNameAndPrice()[0m
+  [32mThen [0m[32mclick first product link[0m                                [90m# com.vcentry.lab.testCases.PlaceOrder.clickFirstProductLink()[0m
+  [31mThen [0m[31mverify the first product name and price in details page[0m [90m# com.vcentry.lab.testCases.PlaceOrder.verifyTheFirstProductNameAndPriceInDetailsPage()[0m
+      [31mjava.lang.NullPointerException
+	at com.vcentry.lab.pages.DetailsPage.getProductName(DetailsPage.java:8)
+	at com.vcentry.lab.testCases.PlaceOrder.verifyTheFirstProductNameAndPriceInDetailsPage(PlaceOrder.java:30)
+	at ✽.verify the first product name and price in details page(file:///C:/Batch%20256/X1_BDD%20(CucumberTestNgWebDriver)/src/test/resources/features/order.feature:19)
+[0m
+  [36mAnd [0m[36mclick add to cart[0m                                        [90m# com.vcentry.lab.testCases.PlaceOrder.clickAddToCart()[0m
